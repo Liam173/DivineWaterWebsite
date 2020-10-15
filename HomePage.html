@@ -1,0 +1,97 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+            <title>Question 2.2</title>
+            <link rel='stylesheet' href='Main.css'><script src="https://kit.fontawesome.com/a076d05399.js"></script>
+            <script src='ExternalJS.js'></script>
+        </head>
+        <body>
+            <section class='section_home'>
+                <div class='body_content' style = 'background: url(https://hecrockford.com/wp-content/uploads/2015/06/10-stage-water-purification-featured.jpg); background-size: 100% 100%'>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><font size = "18">DIVINE WATER</font>
+                    <div class='cart'>
+                        <a href="CheckoutPage.html"><i class="fa fa-shopping-cart" style="font-size:20px"></i></a>
+                    </div>
+                </div>
+                <nav>
+                    <ul class='nav-links'>
+                        <li><a href='HomePage.html'>home</a></li>
+                        <li><a href='AboutPage.html'>about us</a></li>
+                        <li><a href='ProductsPage.html'>products</a></li>
+                        <li><a href='ContactPage.html'>contact us</a></li>
+                    </ul>
+                    <div class='burger'>
+                        <div class='line1'></div>
+                        <div class='line2'></div>
+                        <div class='line3'></div>
+                    </div>
+                </nav>
+
+                <div class='container'>
+                    <div class='home'>
+                        <div class='productListName'>
+                            <div>
+                                <font size = '6'>Services that we provide:</font>
+                            </div>
+                        </div>
+                        <div class='home'>
+                            <div class='gallery'>
+                                <img src='Content\reverseOsmosis.jpg'>
+                                    <div class='desc'>Reverse Osmosis</div>
+                            </div>
+                            <div class='gallery'>
+                                <img src='Content\waterFiltration.jpg'>
+                                    <div class='desc'>Water Filtration</div>
+                            </div>
+                            <div class='gallery'>
+                                <img src='Content\disinfection.jpg'>
+                                    <div class='desc'>Disinfection</div>
+                            </div>
+                            <div class='gallery'>
+                                <img src='Content\waterTesting.jpg'>
+                                    <div class='desc'>Water Testing</div>
+                            </div>
+                            <div class='gallery'>
+                                <img src='Content\phStabilization.jpg'>
+                                    <div class='desc'>pH Stabilization</div>
+                            </div>
+                            <div class='gallery'>
+                                <img src='Content\clientSupport.jpg'>
+                                    <div class='desc'>Client Support</div>
+                            </div>
+                        <div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class='footerHome'>
+                    <font size = '2'>Copyright &copy; 2020 <b>Divine Water</b></font>
+                </div>
+            </footer>
+        </body>
+    </html>
+    
+    <script>
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+        const section = document.querySelectorAll('.body_content');
+        
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            navLinks.forEach((link,index) => {
+                if(link.style.animation){
+                    link.style.animation = '';
+                }else{
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                }
+            });
+            burger.classList.toggle('toggle');
+        });
+    }
+    navSlide();
+    </script>

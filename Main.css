@@ -1,0 +1,615 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/* ------------------------------------------------ NAVIGATION BAR ----------------------------------------------- */
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #28a9e0;
+}
+
+.logo{
+	color: rgb(230, 230, 230);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+}
+
+.nav-links li{
+	list-style: none;
+}
+
+.nav-links a{
+	color: rgb(231, 231, 231);
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+/* ----------------------------------------------------- END ----------------------------------------------------- */
+/* ------------------------------------------------ CREATE BUTTONS ----------------------------------------------- */
+
+.burger{
+	display: none;
+	cursor: pointer;
+}
+
+.burger div{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(230, 230, 230);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+.cart {
+	float:right;
+	padding-right: 40px;
+	padding-top:20px;
+}
+
+.cart a {
+	text-decoration: none !important;
+}
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* ----------------------------------------------------- END ----------------------------------------------------- */
+/* ------------------------------------------- MOBILE AND TABLET VIEWS ------------------------------------------ */
+
+@media screen and (max-width:1024px){
+	.nav-links{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width:768px){
+	body{
+		overflow-x: hidden;
+	}
+	.nav-links{
+		position: absolute;
+		right: 0px;
+		height: 52vh;
+		top: 42vh;
+		background-color: #28a9e0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+    }
+    
+    .body_content{
+        font-size: 12px;
+    }
+
+	.nav-links li{
+		opacity: 0;
+	}
+	
+	.burger{
+		display: block;
+	}
+	
+	.container .home{
+		padding-left:50px;
+	}
+	
+	.container .Projects{
+		padding-left:50px;
+	}
+
+	.contact-info {
+		flex-direction: column;
+	}
+
+	.card {
+		width: 80%;
+		min-width: 500px;
+		margin: 10px 0;
+	}
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@keyframes sectionFade{
+	from{
+		margin-top: 0px;
+	}
+	to{
+		margin-top: 130px;
+	}
+}
+
+/* ----------------------------------------------------- END ----------------------------------------------------- */
+/* ----------------------------------------------- BODY FORMATTING ----------------------------------------------- */
+
+.section_home .body_content {
+	height: 300px;
+	color: 145770;
+    padding:0px 0px 0px 50px;
+}
+
+.container{
+	max-width: 100%;
+	margin-top: auto;
+	background: white;
+	overflow: auto;
+	padding-bottom: 45px;
+}
+
+.container .home{
+	padding-top: 20px;
+	padding-left: 3%;
+	min-height: 300px;
+}
+
+.container .home .productListName {
+	padding-left:5%;
+}
+
+.container .about{
+	text-align: center;
+}
+
+.left {
+	overflow: scroll;
+	float:left;
+	height:60%;
+	width: 50%;
+	background-color: #bedcf6;
+}
+
+.left .holder {
+	padding-top: 12%;
+	float: center;
+}
+  
+.right {
+	float:left;
+	height:60%;
+	width:50%;
+	background-color: 8cc0e8;
+}
+
+.right .image {
+	padding-top: 8%;
+	float: center;
+}
+
+.container .about .title{
+	color: rgb(78, 78, 78);
+}
+
+.container .about .transition{
+	color: #1082c1;
+}
+
+.container .about .body {
+	padding: 35px;
+}
+
+.container .contact {
+	width: 100%;
+}
+
+.gallery {
+	margin: 20px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 13%;
+}
+
+.gallery img {
+	width: 100%;
+	height: 20%;
+}
+
+.gallery .desc {
+	text-align: center;
+	padding: 15px;
+}
+
+.container-contact {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserrat', sans-serif;
+	box-sizing: border-box;
+}
+
+.container-contact {
+	background: #f1f1f1;
+	min-height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-info {
+	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+}
+
+.card {
+	background: #28a9e0;
+	padding: 0 20px;
+	margin: 0 10px;
+	width: calc(33% - 20px);
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.card-icon {
+	font-size: 28px;
+	background: #2f3542;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px !important;
+	border-radius: 50%;
+	transition: 0.3s linear;
+}
+
+.card:hover .card-icon {
+	background: none;
+	color: #2f3542;
+	transform: scale(1.6);
+}
+
+.card p {
+	margin-top: 20px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	max-height: 0;
+	opacity: 0;
+	transition: 0.3s linear;
+}
+
+.card:hover p{
+	max-height: 40px;
+	opacity: 1;
+}
+
+/* ----------------------------------------------------- END ----------------------------------------------------- */
+/* ------------------------------------------------ PRODUCTS PAGE ------------------------------------------------ */
+
+.product1 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+	margin: 3%;
+	float: left;
+	width: 18%;
+	text-align: center;
+    object-fit: cover;
+    font-family: Arial;
+}
+.product2 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+	margin: 3%;
+    text-align: center;
+    float: left;
+    width: 18%;
+    object-fit: cover;
+    font-family: Arial;
+}
+.product3 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+	margin: 3%;
+    text-align: center;
+    float: left;
+    width: 18%;
+    object-fit: cover;
+    font-family: Arial;
+}
+.product4 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+	margin: 3%;
+    text-align: center;
+    float: left;
+    width: 18%;
+    object-fit: cover;
+    font-family: Arial;
+}
+
+.price1 {
+	color: grey;
+	font-size: 22px;
+}
+.price2 {
+	color: grey;
+	font-size: 22px;
+}
+.price3 {
+	color: grey;
+	font-size: 22px;
+}
+.price4 {
+	color: grey;
+	font-size: 22px;
+}
+
+.add-cart {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.product1 button:hover {
+	opacity: 0.7;
+}
+.product2 button:hover {
+	opacity: 0.7;
+}
+.product3 button:hover {
+	opacity: 0.7;
+}
+.product4 button:hover {
+	opacity: 0.7;
+}
+
+/* --------------------------------------------------- END --------------------------------------------------- */
+/* ------------------------------------------------ CART PAGE ------------------------------------------------ */
+
+.container-checkout {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+	padding-bottom: 40px;
+	max-width: 1000px;
+	justify-content: space-around;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.container-checkout ion-icon{
+	font-size: 25px;
+	color: blue;
+	cursor: pointer;
+}
+
+.header-checkout {
+	width: 90%;
+	max-width: 700px;
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 4px solid lightgrey;
+	margin: 0 auto;
+}
+
+.productTitle {
+	width: 30%;
+
+}
+
+.price {
+	width: 30%;
+	border-bottom: 1px solid lightgrey;
+	display: flex;
+	align-items: center;
+}
+
+.quantity{
+	width: 30%;
+	border-bottom: 1px solid lightgrey;
+	display: flex;
+	align-items: center;
+}
+
+.product {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 1px solid lightgrey;
+}
+
+.basketTotalContainer {
+	display: flex;
+	justify-content:flex-end;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.basketTotalTitle {
+	width: 30%;
+}
+
+.basketTotal {
+	width: 10%;
+}
+
+/* ----------------------------------------------------- END ----------------------------------------------------- */
+/* ---------------------------------------------------- FOOTER --------------------------------------------------- */
+
+.footerHome {
+	background-color: #212121;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align:center;
+	padding-top:16px;
+	padding-bottom: 0px;
+	color: white;
+	margin-top: -50px;
+	clear: both;
+}
+
+.footerAbout {
+	background-color: #212121;
+	height: 50px;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align:center;
+	padding-top:16px;
+	padding-bottom: 0px;
+	color: white;
+	margin-top: -50px;
+	clear: both;
+}
+
+.footerProducts {
+	background-color: #212121;
+	height: 50px;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align:center;
+	padding-top:16px;
+	padding-bottom: 0px;
+	color: white;
+	margin-top: -50px;
+	clear: both;
+}
+
+.footerCheckout {
+	background-color: #212121;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align:center;
+	padding-top:16px;
+	padding-bottom: 0px;
+	color: white;
+	margin-top: -50px;
+	clear: both;
+}
+
+.footerContact {
+	background-color: #212121;
+	height: 50px;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align:center;
+	padding-top:16px;
+	padding-bottom: 0px;
+	color: white;
+	margin-top: -50px;
+	clear: both;
+}
+
+/* ----------------------------------------------------- END ----------------------------------------------------- */
+
+.form_container {
+	max-width: 40%;
+	margin-left: 30%;
+	color:white;
+	margin-bottom: 100px;
+	margin-top:5%;
+	
+	font-family: arial;
+	text-align: center;
+	font-size: 18px;
+}
+
+.text {
+	padding: 4px;
+	margin-bottom: 10px;
+	width: 400px;
+}
+
+.submitBut {
+	max-width: 300px;
+	width: 50%;
+	color:rgb(230, 230, 230);
+	margin-bottom: 100px;
+	font-family: arial;
+	padding: 12px;
+	background-color: #28a9e0;
+	text-align: center;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.buttonSubmitOrder {
+	max-width: 300px;
+	width: 30%;
+	color:rgb(230, 230, 230);
+	margin-left: 40%;
+	margin-bottom: 100px;
+	font-family: arial;
+	padding: 12px;
+	background-color: #28a9e0;
+	text-align: center;
+	cursor: pointer;
+	font-size: 18px;
+}

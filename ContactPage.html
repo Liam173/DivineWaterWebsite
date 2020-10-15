@@ -1,0 +1,81 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+            <title>Question 2.2</title>
+            <link rel='stylesheet' href='Main.css'><script src="https://kit.fontawesome.com/a076d05399.js"></script>
+            <script src='ExternalJS.js'></script>
+            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+        </head>
+        <body>
+            <section class='section_home'>
+                <div class='body_content' style = 'background: url(https://hecrockford.com/wp-content/uploads/2015/06/10-stage-water-purification-featured.jpg); background-size: 100% 100%'>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><font size = "18">DIVINE WATER</font>
+                    <div class='cart'>
+                        <a href="CheckoutPage.html"><i class="fa fa-shopping-cart" style="font-size:20px"></i></a>
+                    </div>
+                </div>
+                <nav>
+                    <ul class='nav-links'>
+                        <li><a href='HomePage.html'>home</a></li>
+                        <li><a href='AboutPage.html'>about us</a></li>
+                        <li><a href='ProductsPage.html'>products</a></li>
+                        <li><a href='ContactPage.html'>contact us</a></li>
+                    </ul>
+                    <div class='burger'>
+                        <div class='line1'></div>
+                        <div class='line2'></div>
+                        <div class='line3'></div>
+                    </div>
+                </nav>
+                <div class='container-contact'>
+                    <div class='contact-info'>
+                        <div class="card">
+                            <i class='card-icon far fa-envelope'></i>
+                            <p>support@divinewater.com</p>
+                        </div>
+                        <div class="card">
+                            <i class='card-icon fas fa-phone'></i>
+                            <p>+72 890 0987</p>
+                        </div>
+                        <div class="card">
+                            <i class='card-icon fas fa-map-marker-alt'></i>
+                            <p>Cape Town, South Africa</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class='footerContact'>
+                    <font size = '2'>Copyright &copy; 2020 <b>Divine Water</b></font>
+                </div>
+            </footer>
+        </body>
+    </html>
+    
+    <script>
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+        const section = document.querySelectorAll('.body_content');
+        
+        burger.addEventListener('click', () => {
+            //toggle nav
+            nav.classList.toggle('nav-active');
+        
+            //animate links
+            navLinks.forEach((link,index) => {
+                if(link.style.animation){
+                    link.style.animation = '';
+                }else{
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                }
+            });
+            burger.classList.toggle('toggle');
+        });
+    }
+    navSlide();
+    </script>

@@ -1,0 +1,95 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+            <title>Question 2.2</title>
+            <link rel='stylesheet' href='Main.css'><script src="https://kit.fontawesome.com/a076d05399.js"></script>
+            
+        </head>
+        <body>
+            <section class='section_home'>
+                <div class='body_content' style = 'background: url(https://hecrockford.com/wp-content/uploads/2015/06/10-stage-water-purification-featured.jpg); background-size: 100% 100%'>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><font size = "18">DIVINE WATER</font>
+                    <div class='cart'>
+                        <a href="CheckoutPage.html"><i class="fa fa-shopping-cart" style="font-size:20px"></i><span>0</span></a>
+                    </div>
+                </div>
+                <nav>
+                    <ul class='nav-links'>
+                        <li><a href='HomePage.html'>home</a></li>
+                        <li><a href='AboutPage.html'>about us</a></li>
+                        <li><a href='ProductsPage.html'>products</a></li>
+                        <li><a href='ContactPage.html'>contact us</a></li>
+                    </ul>
+                    <div class='burger'>
+                        <div class='line1'></div>
+                        <div class='line2'></div>
+                        <div class='line3'></div>
+                    </div>
+                </nav>
+                <div class='container'>
+                    <div class='product'>
+                        <div class="product1">
+                            <img src="Content/filtrationSystem1.jpg" alt="3 Stage Big Blue Filtration System" style="width:100%">
+                            <h1><br>3 Stage Big Blue Filtration System</h1>
+                            <p class="price1"><br>R 3 999,00</p><br>
+                            <p>This whole house filtration system will deliver high-quality drinking water. The ideal application is for rainwater.</p><br><br>
+                            <a class='add-cart cart1' href='#'>Add to Cart</a>
+                        </div>
+                        <div class="product2">
+                            <img src="Content/filtrationSystem2.jpg" alt="Little Luxury Tap Filter Unit" style="width:100%">
+                            <h1><br>Little Luxury Tap Filter Unit</h1>
+                            <p class="price2"><br>R 199,00</p><br>
+                            <p>This simple to use filter fits onto any tap present in your house, designed to filter the water coming out of the taps.</p><br><br>
+                            <a class='add-cart cart2' href='#'>Add to Cart</a>
+                        </div>
+                        <div class="product3">
+                            <img src="Content/filtrationSystem3.jpg" alt="14 Liter Mineral Pot Counter Top Water Filtration System" style="width:100%">
+                            <h1><br>14 Liter Mineral Pot Counter Top</h1>
+                            <p class="price3"><br>R 389,00</p><br>
+                            <p>This is a standalone filtration system that slowly filters the water throughout the day, traversing from top to bottom container.</p><br><br>
+                            <a class='add-cart cart3' href='#'>Add to Cart</a>
+                        </div>
+                        <div class="product4">
+                            <img src="Content/filtrationSystem4.jpg" alt="Reverse Osmosis Water Filter System" style="width:100%">
+                            <h1><br>Reverse Osmosis Water Filter System</h1>
+                            <p class="price4"><br>R 1 799,00</p><br>
+                            <p>The 50 GPD under counter reverse osmosis system provides safe, pure water using Reverse Osmosis Technology.</p><br><br>
+                            <a class='add-cart cart4' href='#'>Add to Cart</a>
+                        </div>
+                    </div>
+                    <script src='ExternalJS.js'></script>
+                    <script src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js'></script>
+                </div>
+            </section>
+            <footer>
+                <div class='footerProducts'>
+                    <font size = '2'>Copyright &copy; 2020 <b>Divine Water</b></font>
+                </div>
+            </footer>
+        </body>
+    </html>
+    
+    <script>
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+        const section = document.querySelectorAll('.body_content');
+        
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            navLinks.forEach((link,index) => {
+                if(link.style.animation){
+                    link.style.animation = '';
+                }else{
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                }
+            });
+            burger.classList.toggle('toggle');
+        });
+    }
+    navSlide();
+    </script>
